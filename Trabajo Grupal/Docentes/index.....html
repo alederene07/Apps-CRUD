@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Docentes</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="docente_styles.css"> 
+</head>
+<body>
+  
+    <h1>Docentes</h1>
+    <div class="container">
+    
+    <form id="docenteForm">
+      <input type="hidden" id="docenteId">
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" id="apellido" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="mail">Email:</label>
+        <input type="email" class="form-control" id="mail" required>
+      </div>
+      <div class="form-group">
+        <label for="cumple">Fecha de Nacimiento:</label>
+        <input type="date" class="form-control" id="cumple">
+      </div>
+      <div class="form-group">
+        <label for="celular">Celular:</label>
+        <input type="tel" class="form-control" id="celular">
+      </div>
+      <button type="submit" class="btn btn-primary" id="guardarBtn">Guardar</button>
+    </form>
+    </div>
+    <h2 class="mt-5">Lista de Docentes</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover" id="tablaDocentes">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Celular</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="docenteBody">
+        </tbody>
+      </table>
+    </div>
+  <script src="docente_app.js"></script>
+</body>
+</html>
+
