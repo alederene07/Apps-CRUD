@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>AJAX y PHP para JSON</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2> AJAX y PHP para JSON</h2>
+    
+    <button id="cargarDatos">Cargar Datos desde PHP</button>
+    
+    <div id="resultado"></div>
+    
+    <script>
+    $(document).ready(function() {
+        $('#cargarDatos').click(function() {
+            $.ajax({
+                url: 'generar_json.php',
+                dataType: 'json',
+                success: function(data) {
+                    mostrarDatos(data);
+                },
+                error: function(error) {
+                    console.log("Error al cargar datos: ", error);
+                }
+            });
+        });
+        
+        function mostrarDatos(data) {
+            var resultado = '<ul>';
+            $.each(data, function(index, usuario) {
+                resultado += '<li>' + usuario.id + ': ' + usuario.nombre + ' (' + usuario.correo + ')' + '</li>';
+            });
+            resultado += '</ul>';
+            $('#resultado').html(resultado);
+        }
+    });
+    </script>
+</body>
+</html>
