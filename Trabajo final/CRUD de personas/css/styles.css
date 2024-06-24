@@ -1,0 +1,33 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: yellow;
+    margin: 20px ;
+}
+/* Estilos opcionales para resaltar la fila seleccionada */
+.table-info {
+    background-color: #cce5ff; /* Color de fondo para resaltar */
+}
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #38393a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}.table{
+    background-color: #38393a;
+    color: #fff;
+    border-style: ridge ;
+    border: #38393a;
+}
+label{
+    color: white;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #fff;
+}
